@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package thydungeonman;
-
+import java.util.Scanner;
 /**
  *
  * @author Britt2ney
@@ -16,6 +16,7 @@ public class Dungeonman {
     private boolean trinket;
     private char play;
     private boolean lost;
+    
     
     public Dungeonman(){
         score = 0;
@@ -72,9 +73,34 @@ public class Dungeonman {
     }
     
     public void atNorth(String input){
-        
+               
+         switch(input.toLowerCase()){
+            case("look rope"):
+                System.out.println("It looks okay. You've seen better.");
+                break;
+            case("get rope"):
+                System.out.println("You attempt to take ye ROPE but alas it is enchanted!"
+                        + " It glows a mustard red and smells like a public privy. "
+                        + "The ROPE wraps round your neck and hangs you from parapets. "
+                        + "With your last breath, you wonder what parapets are. ");
+                
+                break;
+            case("look parapets"):
+                System.out.println("Well, they're parapets."
+                        + " This much we know for sure.");
+                break;
+            case("go south"):
+                goMain();
+                break;
+            default:
+                badInput();
+               
+        }
+  
+            
+
     }
-    
+
     public void atSouth(String input){
         //Check input and respond accordingly
     }
